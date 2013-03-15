@@ -25,6 +25,7 @@ end
 
 task :migrate do
   rakefile = File.expand_path('../spec/dummy/Rakefile', __FILE__)
+  plugin_name = File.basename('')
 
   # dradis_core migrations
   sh("rake -f #{rakefile} dradis:install:migrations")
@@ -34,7 +35,7 @@ task :migrate do
     puts "Skipping :migrate as this plugin doesn't define any migrations"
   else
     # TODO: hard-coded plugin name ahead!
-    sh("rake -f #{rakefile} dradis_osvdb:install:migrations")
+    sh("rake -f #{rakefile} #{plugin_name}:install:migrations")
   end
   sh("rake -f #{rakefile} db:create db:migrate db:test:prepare")
 end
