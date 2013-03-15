@@ -4,14 +4,14 @@ Open Source Vulnerability Database (OSVDB) import plugin for the Dradis Framewor
 [![Build Status](https://secure.travis-ci.org/dradis/dradis-osvdb.png?branch=master)](http://travis-ci.org/dradis/dradis-osvdb)
 
 OSVDB is an independent and open source database created by and for the
-community. Our goal is to provide accurate, detailed, current, and unbiased 
+community. Our goal is to provide accurate, detailed, current, and unbiased
 technical information." - http://osvdb.org/
 
 This plugin provides search filters to query the OSVDB from within the
 [Dradis Framework](https://github.com/dradis/dradisframework). The plugin makes
 use of the API provided by OSVDB (http://osvdb.org/api).
 
-You will need to register in their site to get an API key: 
+You will need to register in their site to get an API key:
 http://osvdb.org/account/signup
 
 Once you have your key, add it as osvdb:api_key in through the Configuration
