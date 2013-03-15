@@ -10,4 +10,4 @@ notifications:
     channels:
       - "irc.freenode.org#dradis"
 bundler_args: --path vendor/bundle
-script: "DISPLAY=:99.0 bundle exec rspec spec"
+script: "DISPLAY=:99.0 bundle exec rspec spec --trace"
