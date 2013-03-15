@@ -1,22 +1,40 @@
+require 'bundler/gem_tasks'
 require 'rake'
-require 'rake/testtask'
-require 'rake/rdoctask'
+require 'rspec/core/rake_task'
 
-desc 'Default: run unit tests.'
-task :default => :test
+RSpec::Core::RakeTask.new(:spec => :dummy_app) do |t|
+  t.pattern =  File.expand_path('../spec/**/*_spec.rb', __FILE__)
+end
+task :default => :spec
 
-desc 'Test the osvdb_import plugin.'
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'lib'
-  t.pattern = 'test/**/*_test.rb'
-  t.verbose = true
+desc 'Generates a dummy app for testing'
+task :dummy_app => [:setup, :migrate]
+
+task :setup do
+  require 'rails'
+  require 'dradis_core'
+  require 'dradis/generators/dummy/dummy_generator'
+
+  dummy = File.expand_path('../spec/dummy', __FILE__)
+
+  sh "rm -rf #{dummy}"
+  Dradis::DummyGenerator.start(
+    %W(. --quiet --force --skip-bundle --dummy-path=#{dummy})
+  )
 end
 
-desc 'Generate documentation for the osvdb_import plugin.'
-Rake::RDocTask.new(:rdoc) do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'OSVDBImport'
-  rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+task :migrate do
+  rakefile = File.expand_path('../spec/dummy/Rakefile', __FILE__)
+
+  # dradis_core migrations
+  sh("rake -f #{rakefile} dradis:install:migrations")
+
+  # this gem's migrations
+  if Dir[ File.expand_path('../db/migrate/*', __FILE__) ].empty?
+    puts "Skipping :migrate as this plugin doesn't define any migrations"
+  else
+    # TODO: hard-coded plugin name ahead!
+    sh("rake -f #{rakefile} dradis_osvdb:install:migrations")
+  end
+  sh("rake -f #{rakefile} db:create db:migrate db:test:prepare")
 end
