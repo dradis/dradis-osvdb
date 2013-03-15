@@ -11,12 +11,12 @@ end
 #
 # This module provides helper methods to query the OSVDB.
 #
-# You will need to register in their site to get an API key: 
+# You will need to register in their site to get an API key:
 # http://osvdb.org/account/signup
 module OSVDB
 
   private
-  # Internal method that runs the query, parses the XML and returns the 
+  # Internal method that runs the query, parses the XML and returns the
   # resulting array of vulnerabilities
   def self.run_search(params={})
     url = params[:url]
@@ -66,7 +66,7 @@ module OSVDB
   # Run a custom search against the online OSVDB repository. Required
   # parameters:
   #   +:API_key+ Your OSVDB API key
-  #   +:query+ The general query string you want to use in your request 
+  #   +:query+ The general query string you want to use in your request
   def self.GeneralSearch(params={})
     key = params[:API_key]
     query = params[:query]
@@ -77,7 +77,7 @@ module OSVDB
     return run_search(:url => url)
   end
 
-  # Run a OSVDB ID Lookup query against the online OSVDB repository. Required 
+  # Run a OSVDB ID Lookup query against the online OSVDB repository. Required
   # parameters:
   #   +:API_key+ Your OSVDB API key
   #   +:osvdb_id+ The OSVDB ID you are looking for
@@ -87,8 +87,6 @@ module OSVDB
 
     url = URI.parse( "http://osvdb.org/api/find_by_osvdb/#{key}/#{osvdbid}" )
 
-    return run_search(:url => url) 
+    return run_search(:url => url)
   end
 end
-
-
