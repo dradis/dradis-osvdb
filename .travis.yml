@@ -8,6 +8,7 @@ notifications:
     on_success: change
     on_failure: always
     channels:
-      - "irc.freenode.org#dradis"
+      - 'irc.freenode.org#dradis'
 bundler_args: --path vendor/bundle
+before_script: 'bundle exec rake dummy_app'
 script: "DISPLAY=:99.0 bundle exec rake spec --trace"

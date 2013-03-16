@@ -2,7 +2,7 @@ require 'bundler/gem_tasks'
 require 'rake'
 require 'rspec/core/rake_task'
 
-RSpec::Core::RakeTask.new(:spec => :dummy_app) do |t|
+RSpec::Core::RakeTask.new(:spec) do |t|
   t.pattern =  File.expand_path('../spec/**/*_spec.rb', __FILE__)
 end
 task :default => :spec
@@ -23,6 +23,8 @@ task :setup do
   )
 end
 
+# re: name, see:
+#   https://github.com/rails/rails/blob/master/railties/lib/rails/generators/rails/plugin_new/plugin_new_generator.rb#L245-L255
 task :migrate do
   rakefile = File.expand_path('../spec/dummy/Rakefile', __FILE__)
   plugin_name = File.basename('')
