@@ -1,24 +1,21 @@
 require 'spec_helper'
 
 describe "OSVDB API" do
-  # # Check that the user has configured an API key
-  # def test_no_API_key
-  #   assert_raise RuntimeError do
-  #     OSVDBImport::Filters::validate_API_key()
-  #   end
-  #
-  #   [
-  #     OSVDBImport::Filters::OSVDBIDLookup,
-  #     OSVDBImport::Filters::GeneralSearch
-  #   ].each do |filter|
-  #     results = filter::run(:query => '1234')
-  #     assert_equal( 1, results.size, 'Only one result was expected (the error message)')
-  #
-  #     assert_equal( 'Error in OSVDB API key', results[0][:title], 'Unknown error when expecting an API key error' )
-  #   end
-  # end
+  let(:api_key) { '0xFAKExAPIxKEYx0' }
 
-  it "loads in Travis" do
-    true.should eq(true)
+  it "finds a record by OSVDB ID" do
+    stub_request(:get, "http://osvdb.org/api/find_by_osvdb/#{api_key}/1234").
+      to_return(:status => 200,
+        :body => File.read('spec/fixtures/files/osvdbid_1234.xml'),
+        :headers => {'Content-Type' => 'application/xml; charset=utf-8'})
+
+    results = Dradis::Plugins::OSVDB::API.by_osvdbid(:api_key => api_key, :id => 1234)
+    results.count.should eq(1)
+
+    results[0].keys.should include('title')
+    results[0].keys.should include('osvdb_id')
+
+    results[0]['title'].should eq('Lynx URL Handling Remote Overflow')
+    results[0]['osvdb_id'].should eq(1234)
   end
 end

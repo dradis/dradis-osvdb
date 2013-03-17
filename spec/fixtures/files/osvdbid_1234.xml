@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vulnerability>
+  <complete type="integer">45</complete>
+  <created-on type="datetime">2003-02-21T02:10:00-06:00</created-on>
+  <description></description>
+  <disclosure-date type="datetime">2000-02-27T00:00:00-06:00</disclosure-date>
+  <disclosure-date-unknown type="boolean" nil="true"></disclosure-date-unknown>
+  <disclosure-source-id type="integer" nil="true"></disclosure-source-id>
+  <discovery-date type="datetime">1970-01-01T00:00:00-06:00</discovery-date>
+  <discovery-date-unknown type="boolean" nil="true"></discovery-date-unknown>
+  <exploit-publish-date type="datetime">1970-01-01T00:00:00-06:00</exploit-publish-date>
+  <exploit-publish-date-unknown type="boolean" nil="true"></exploit-publish-date-unknown>
+  <id type="integer">1234</id>
+  <keywords></keywords>
+  <manual-notes nil="true"></manual-notes>
+  <osvdb-id type="integer">1234</osvdb-id>
+  <short-description></short-description>
+  <solution>Upgrade to version 2.8.3pre5 or higher, as it has been reported to fix this vulnerability.  An upgrade is required as there are no known workarounds.</solution>
+  <solution-date type="datetime">1970-01-01T00:00:00-06:00</solution-date>
+  <solution-date-unknown type="boolean" nil="true"></solution-date-unknown>
+  <t-description></t-description>
+  <third-party-solution-date type="datetime">1970-01-01T00:00:00-06:00</third-party-solution-date>
+  <third-party-solution-date-unknown type="boolean" nil="true"></third-party-solution-date-unknown>
+  <title>Lynx URL Handling Remote Overflow</title>
+  <updated-on type="datetime">2010-03-09T12:35:49-06:00</updated-on>
+  <vendor-ack-date type="datetime">1970-01-01T00:00:00-06:00</vendor-ack-date>
+  <vendor-ack-date-unknown type="boolean" nil="true"></vendor-ack-date-unknown>
+  <vendor-informed-date type="datetime">1970-01-01T00:00:00-06:00</vendor-informed-date>
+  <vendor-informed-date-unknown type="boolean" nil="true"></vendor-informed-date-unknown>
+  <vulnerability-id type="integer">1234</vulnerability-id>
+  <ext-references type="array">
+    <ext-reference>
+      <auth-required type="boolean">false</auth-required>
+      <created-on type="datetime">2009-07-21T14:23:45-05:00</created-on>
+      <ext-reference-type-id type="integer">3</ext-reference-type-id>
+      <fourofour type="boolean">false</fourofour>
+      <id type="integer">1405185</id>
+      <indirect type="boolean">false</indirect>
+      <updated-on type="datetime">2009-07-21T14:23:45-05:00</updated-on>
+      <value>2000-0209</value>
+      <vulnerability-id type="integer">1234</vulnerability-id>
+    </ext-reference>
+    <ext-reference>
+      <auth-required type="boolean">false</auth-required>
+      <created-on type="datetime">2009-07-21T14:23:45-05:00</created-on>
+      <ext-reference-type-id type="integer">5</ext-reference-type-id>
+      <fourofour type="boolean">false</fourofour>
+      <id type="integer">1405186</id>
+      <indirect type="boolean">false</indirect>
+      <updated-on type="datetime">2009-07-21T14:23:45-05:00</updated-on>
+      <value>1012</value>
+      <vulnerability-id type="integer">1234</vulnerability-id>
+    </ext-reference>
+    <ext-reference>
+      <auth-required type="boolean">false</auth-required>
+      <created-on type="datetime">2009-12-22T21:44:31-06:00</created-on>
+      <ext-reference-type-id type="integer">44</ext-reference-type-id>
+      <fourofour type="boolean">false</fourofour>
+      <id type="integer">1405187</id>
+      <indirect type="boolean">false</indirect>
+      <updated-on type="datetime">2009-12-22T21:44:31-06:00</updated-on>
+      <value>1738</value>
+      <vulnerability-id type="integer">1234</vulnerability-id>
+    </ext-reference>
+  </ext-references>
+  <cvss-metrics type="array">
+    <cvss-metric>
+      <access-complexity>HIGH</access-complexity>
+      <access-vector>NETWORK</access-vector>
+      <authentication>NONE</authentication>
+      <availability-impact>COMPLETE</availability-impact>
+      <calculated-cvss-base-score type="float">7.6</calculated-cvss-base-score>
+      <confidentiality-impact>COMPLETE</confidentiality-impact>
+      <created-at type="datetime">2009-10-27T22:22:43-05:00</created-at>
+      <cve-id>2000-0209</cve-id>
+      <generated-on type="datetime">2003-12-31T23:00:00-06:00</generated-on>
+      <id type="integer">72561</id>
+      <integrity-impact>COMPLETE</integrity-impact>
+      <score type="float">7.6</score>
+      <short-notation>AV:N/AC:H/Au:N/C:C/I:C/A:C</short-notation>
+      <source>http://nvd.nist.gov</source>
+      <updated-at type="datetime">2009-10-27T22:22:43-05:00</updated-at>
+      <vulnerability-id type="integer">1234</vulnerability-id>
+    </cvss-metric>
+  </cvss-metrics>
+  <classification-items type="array">
+    <classification-item>
+      <classification-id type="integer">12</classification-id>
+      <id type="integer">496470</id>
+      <vulnerability-id type="integer">1234</vulnerability-id>
+    </classification-item>
+    <classification-item>
+      <classification-id type="integer">2</classification-id>
+      <id type="integer">496471</id>
+      <vulnerability-id type="integer">1234</vulnerability-id>
+    </classification-item>
+    <classification-item>
+      <classification-id type="integer">18</classification-id>
+      <id type="integer">496472</id>
+      <vulnerability-id type="integer">1234</vulnerability-id>
+    </classification-item>
+    <classification-item>
+      <classification-id type="integer">38</classification-id>
+      <id type="integer">496473</id>
+      <vulnerability-id type="integer">1234</vulnerability-id>
+    </classification-item>
+    <classification-item>
+      <classification-id type="integer">41</classification-id>
+      <id type="integer">496474</id>
+      <vulnerability-id type="integer">1234</vulnerability-id>
+    </classification-item>
+  </classification-items>
+  <object-correlations type="array"/>
+</vulnerability>
