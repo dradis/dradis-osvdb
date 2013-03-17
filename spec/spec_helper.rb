@@ -10,7 +10,7 @@ Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
 require 'database_cleaner'
 require 'factory_girl_rails'
-
+require 'webmock/rspec'
 
 RSpec.configure do |config|
   config.color = true
