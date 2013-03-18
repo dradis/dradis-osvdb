@@ -3,11 +3,11 @@ class DradisTasks < Thor
     class OSVDB < Thor
       namespace     "dradis:import:osvdb"
 
-      desc      "search QUERY", "search the OSVDB with a general query"
-      def search(query)
+      desc      "by_custom_query QUERY", "search the OSVDB with a general query"
+      def by_custom_query(query)
         require 'config/environment'
 
-        results = OSVDBImport::Filters::GeneralSearch.run(:query => query)
+        results = Dradis::Plugins::OSVDB::Filters::GeneralSearch.run(:query => query)
 
         puts "OSVDB Search\n============"
         puts "#{results.size} results"
@@ -17,11 +17,11 @@ class DradisTasks < Thor
         end
       end
 
-      desc      "lookup ID", "search the OSVDB for a specific ID"
-      def lookup(id)
+      desc      "lookup by OSVDB ID", "search the OSVDB for a specific ID"
+      def by_osvdbid(id)
         require 'config/environment'
 
-        results = OSVDBImport::Filters::OSVDBIDLookup.run(:query => id)
+        results = Dradis::Plugins::OSVDB::Filters::OSVDBIDLookup.run(:query => id)
 
         puts "OSVDB Search\n============"
         puts "#{results.size} results"
