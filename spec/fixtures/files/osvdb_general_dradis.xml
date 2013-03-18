@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vulnerabilities type="array">
+  <vulnerability>
+    <complete type="integer">80</complete>
+    <created-on type="datetime">2010-05-19T16:20:38-05:00</created-on>
+    <description>Certain input contained in uploaded files is not properly sanitised before being returned to the user in an error message. This can be exploited to execute arbitrary HTML and script code in a user's browser session in context of an affected site by tricking the user into uploading a specially crafted XML file.
+</description>
+    <disclosure-date type="datetime">2010-05-19T16:19:26-05:00</disclosure-date>
+    <disclosure-date-unknown type="boolean">false</disclosure-date-unknown>
+    <disclosure-source-id type="integer" nil="true"></disclosure-source-id>
+    <discovery-date type="datetime">1970-01-01T00:00:00-06:00</discovery-date>
+    <discovery-date-unknown type="boolean">true</discovery-date-unknown>
+    <exploit-publish-date type="datetime">1970-01-01T00:00:00-06:00</exploit-publish-date>
+    <exploit-publish-date-unknown type="boolean">true</exploit-publish-date-unknown>
+    <id type="integer">1103139</id>
+    <keywords></keywords>
+    <manual-notes nil="true"></manual-notes>
+    <osvdb-id type="integer">64730</osvdb-id>
+    <short-description></short-description>
+    <solution>Upgrade to version 2.5.2 or higher, as it has been reported to fix this vulnerability.  An upgrade is required as there are no known workarounds.</solution>
+    <solution-date type="datetime">2010-05-19T16:19:26-05:00</solution-date>
+    <solution-date-unknown type="boolean">false</solution-date-unknown>
+    <t-description></t-description>
+    <third-party-solution-date type="datetime">1970-01-01T00:00:00-06:00</third-party-solution-date>
+    <third-party-solution-date-unknown type="boolean">true</third-party-solution-date-unknown>
+    <title>dradis XML File Upload XSS</title>
+    <updated-on type="datetime">2010-05-21T06:42:38-05:00</updated-on>
+    <vendor-ack-date type="datetime">1970-01-01T00:00:00-06:00</vendor-ack-date>
+    <vendor-ack-date-unknown type="boolean">true</vendor-ack-date-unknown>
+    <vendor-informed-date type="datetime">1970-01-01T00:00:00-06:00</vendor-informed-date>
+    <vendor-informed-date-unknown type="boolean">true</vendor-informed-date-unknown>
+    <vulnerability-id type="integer">1103139</vulnerability-id>
+    <ext-references type="array">
+      <ext-reference>
+        <auth-required type="boolean">false</auth-required>
+        <created-on type="datetime">2010-05-19T16:20:38-05:00</created-on>
+        <ext-reference-type-id type="integer">19</ext-reference-type-id>
+        <fourofour type="boolean">false</fourofour>
+        <id type="integer">1541849</id>
+        <indirect type="boolean">false</indirect>
+        <updated-on type="datetime">2010-05-19T16:20:38-05:00</updated-on>
+        <value>39875</value>
+        <vulnerability-id type="integer">1103139</vulnerability-id>
+      </ext-reference>
+      <ext-reference>
+        <auth-required type="boolean">false</auth-required>
+        <created-on type="datetime">2010-05-19T16:25:26-05:00</created-on>
+        <ext-reference-type-id type="integer">8</ext-reference-type-id>
+        <fourofour type="boolean">false</fourofour>
+        <id type="integer">1541850</id>
+        <indirect type="boolean">false</indirect>
+        <updated-on type="datetime">2010-05-19T16:25:26-05:00</updated-on>
+        <value>http://dradisframework.org/security_reports.html</value>
+        <vulnerability-id type="integer">1103139</vulnerability-id>
+      </ext-reference>
+      <ext-reference>
+        <auth-required type="boolean">false</auth-required>
+        <created-on type="datetime">2010-05-19T16:25:36-05:00</created-on>
+        <ext-reference-type-id type="integer">24</ext-reference-type-id>
+        <fourofour type="boolean">false</fourofour>
+        <id type="integer">1541851</id>
+        <indirect type="boolean">false</indirect>
+        <updated-on type="datetime">2010-05-19T16:25:36-05:00</updated-on>
+        <value>https://holisticinfosec.org/content/view/139/45/</value>
+        <vulnerability-id type="integer">1103139</vulnerability-id>
+      </ext-reference>
+    </ext-references>
+    <cvss-metrics type="array"/>
+    <classification-items type="array">
+      <classification-item>
+        <classification-id type="integer">2</classification-id>
+        <id type="integer">560194</id>
+        <vulnerability-id type="integer">1103139</vulnerability-id>
+      </classification-item>
+      <classification-item>
+        <classification-id type="integer">12</classification-id>
+        <id type="integer">560195</id>
+        <vulnerability-id type="integer">1103139</vulnerability-id>
+      </classification-item>
+      <classification-item>
+        <classification-id type="integer">18</classification-id>
+        <id type="integer">560196</id>
+        <vulnerability-id type="integer">1103139</vulnerability-id>
+      </classification-item>
+      <classification-item>
+        <classification-id type="integer">38</classification-id>
+        <id type="integer">560197</id>
+        <vulnerability-id type="integer">1103139</vulnerability-id>
+      </classification-item>
+      <classification-item>
+        <classification-id type="integer">24</classification-id>
+        <id type="integer">560198</id>
+        <vulnerability-id type="integer">1103139</vulnerability-id>
+      </classification-item>
+      <classification-item>
+        <classification-id type="integer">41</classification-id>
+        <id type="integer">560199</id>
+        <vulnerability-id type="integer">1103139</vulnerability-id>
+      </classification-item>
+      <classification-item>
+        <classification-id type="integer">43</classification-id>
+        <id type="integer">560200</id>
+        <vulnerability-id type="integer">1103139</vulnerability-id>
+      </classification-item>
+      <classification-item>
+        <classification-id type="integer">29</classification-id>
+        <id type="integer">560201</id>
+        <vulnerability-id type="integer">1103139</vulnerability-id>
+      </classification-item>
+      <classification-item>
+        <classification-id type="integer">41</classification-id>
+        <id type="integer">671622</id>
+        <vulnerability-id type="integer">1103139</vulnerability-id>
+      </classification-item>
+    </classification-items>
+    <object-correlations type="array"/>
+  </vulnerability>
+  <vulnerability>
+    <complete type="integer">45</complete>
+    <created-on type="datetime">2009-02-24T18:54:19-06:00</created-on>
+    <description></description>
+    <disclosure-date type="datetime">2009-02-24T18:54:14-06:00</disclosure-date>
+    <disclosure-date-unknown type="boolean" nil="true"></disclosure-date-unknown>
+    <disclosure-source-id type="integer" nil="true"></disclosure-source-id>
+    <discovery-date type="datetime">1970-01-01T00:00:00-06:00</discovery-date>
+    <discovery-date-unknown type="boolean" nil="true"></discovery-date-unknown>
+    <exploit-publish-date type="datetime">1970-01-01T00:00:00-06:00</exploit-publish-date>
+    <exploit-publish-date-unknown type="boolean" nil="true"></exploit-publish-date-unknown>
+    <id type="integer">1051999</id>
+    <keywords></keywords>
+    <manual-notes nil="true"></manual-notes>
+    <osvdb-id type="integer">53319</osvdb-id>
+    <short-description></short-description>
+    <solution>Upgrade to version 2.0.1 or higher, as it has been reported to fix this vulnerability.  An upgrade is required as there are no known workarounds.</solution>
+    <solution-date type="datetime">2009-02-24T00:00:00-06:00</solution-date>
+    <solution-date-unknown type="boolean" nil="true"></solution-date-unknown>
+    <t-description></t-description>
+    <third-party-solution-date type="datetime">1970-01-01T00:00:00-06:00</third-party-solution-date>
+    <third-party-solution-date-unknown type="boolean" nil="true"></third-party-solution-date-unknown>
+    <title>dradis Unspecified Issue</title>
+    <updated-on type="datetime">2009-11-26T13:29:22-06:00</updated-on>
+    <vendor-ack-date type="datetime">1970-01-01T00:00:00-06:00</vendor-ack-date>
+    <vendor-ack-date-unknown type="boolean" nil="true"></vendor-ack-date-unknown>
+    <vendor-informed-date type="datetime">1970-01-01T00:00:00-06:00</vendor-informed-date>
+    <vendor-informed-date-unknown type="boolean" nil="true"></vendor-informed-date-unknown>
+    <vulnerability-id type="integer">1051999</vulnerability-id>
+    <ext-references type="array">
+      <ext-reference>
+        <auth-required type="boolean">false</auth-required>
+        <created-on type="datetime">2009-04-07T06:23:00-05:00</created-on>
+        <ext-reference-type-id type="integer">21</ext-reference-type-id>
+        <fourofour type="boolean">false</fourofour>
+        <id type="integer">1187343</id>
+        <indirect type="boolean">false</indirect>
+        <updated-on type="datetime">2009-04-07T06:23:00-05:00</updated-on>
+        <value>http://dradis.sourceforge.net/</value>
+        <vulnerability-id type="integer">1051999</vulnerability-id>
+      </ext-reference>
+      <ext-reference>
+        <auth-required type="boolean">false</auth-required>
+        <created-on type="datetime">2009-04-07T06:23:08-05:00</created-on>
+        <ext-reference-type-id type="integer">33</ext-reference-type-id>
+        <fourofour type="boolean">false</fourofour>
+        <id type="integer">1187344</id>
+        <indirect type="boolean">false</indirect>
+        <updated-on type="datetime">2009-04-07T06:23:08-05:00</updated-on>
+        <value>http://freshmeat.net/projects/dradis/?branch_id=74380&amp;release_id=294806</value>
+        <vulnerability-id type="integer">1051999</vulnerability-id>
+      </ext-reference>
+      <ext-reference>
+        <auth-required type="boolean">false</auth-required>
+        <created-on type="datetime">2009-11-26T05:52:00-06:00</created-on>
+        <ext-reference-type-id type="integer">5</ext-reference-type-id>
+        <fourofour type="boolean">false</fourofour>
+        <id type="integer">1187345</id>
+        <indirect type="boolean">false</indirect>
+        <updated-on type="datetime">2009-11-26T05:52:00-06:00</updated-on>
+        <value>33892</value>
+        <vulnerability-id type="integer">1051999</vulnerability-id>
+      </ext-reference>
+    </ext-references>
+    <cvss-metrics type="array"/>
+    <classification-items type="array">
+      <classification-item>
+        <classification-id type="integer">41</classification-id>
+        <id type="integer">430271</id>
+        <vulnerability-id type="integer">1051999</vulnerability-id>
+      </classification-item>
+      <classification-item>
+        <classification-id type="integer">38</classification-id>
+        <id type="integer">430272</id>
+        <vulnerability-id type="integer">1051999</vulnerability-id>
+      </classification-item>
+      <classification-item>
+        <classification-id type="integer">5</classification-id>
+        <id type="integer">660281</id>
+        <vulnerability-id type="integer">1051999</vulnerability-id>
+      </classification-item>
+      <classification-item>
+        <classification-id type="integer">16</classification-id>
+        <id type="integer">660282</id>
+        <vulnerability-id type="integer">1051999</vulnerability-id>
+      </classification-item>
+      <classification-item>
+        <classification-id type="integer">24</classification-id>
+        <id type="integer">660283</id>
+        <vulnerability-id type="integer">1051999</vulnerability-id>
+      </classification-item>
+    </classification-items>
+    <object-correlations type="array"/>
+  </vulnerability>
+</vulnerabilities>

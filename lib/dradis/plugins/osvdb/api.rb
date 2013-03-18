@@ -57,8 +57,8 @@ module Dradis
         # Find by Microsoft Security Bulletin ID. Required parameters:
         #   +:API_key+ Your OSVDB API key
         #   +:mssb_id+ Microsoft Security Buletin ID (e.g. MS05-006)
-        def self.ByMSSB(params={})
-          key = params[:API_key]
+        def self.by_mssbid(params={})
+          key = params[:apy_key]
           mssb = params[:mssb_id]
 
           url = URI.parse( "http://osvdb.org/api/find_by_mssb/#{key}/#{mssb}" )
@@ -70,8 +70,8 @@ module Dradis
         # parameters:
         #   +:API_key+ Your OSVDB API key
         #   +:query+ The general query string you want to use in your request
-        def self.GeneralSearch(params={})
-          key = params[:API_key]
+        def self.by_custom_query(params={})
+          key = params[:api_key]
           query = params[:query]
 
           # Sample Query for "XSS"  http://osvdb.org/api/vulns_by_custom_search/<your_API_key>/?request=XSS&order=osvdb_id
@@ -86,7 +86,7 @@ module Dradis
         #   +:osvdb_id+ The OSVDB ID you are looking for
         def self.by_osvdbid(params={})
           key = params[:api_key]
-          osvdbid = params[:id]
+          osvdbid = params[:osvdb_id]
 
           url = URI.parse( "http://osvdb.org/api/find_by_osvdb/#{key}/#{osvdbid}" )
 
