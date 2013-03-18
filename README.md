@@ -20,6 +20,15 @@ Manager.
 The plugin requires Dradis 3.0 or higher.
 
 
+Testing
+-------
+
+* Download: `git clone https://github.com/dradis/dradis-osvdb.git`
+* Bundle: `cd dradis-osvdb/ && bundle`
+* Generate dummy app for testing: `bundle exec rake dummy_app`
+* Run specs: `bundle exec rake spec`
+
+
 More information
 ----------------
 
