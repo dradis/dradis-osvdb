@@ -36,7 +36,7 @@ module Dradis
           result_set.collect do |record|
             {
               :title => record['title'],
-              :description => record.collect do |key, value| "#[#{key}]#\n#{value}\n" end.join
+              :description => record.collect do |key, value| "#[#{key.capitalize}]#\n#{value}\n\n" end.join
             }
           end
         end
