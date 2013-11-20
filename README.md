@@ -1,7 +1,8 @@
 Open Source Vulnerability Database (OSVDB) import plugin for the Dradis Framework
 =================================================================================
 
-[![Build Status](https://secure.travis-ci.org/dradis/dradis-osvdb.png?branch=master)](http://travis-ci.org/dradis/dradis-osvdb)
+[![Build Status](https://secure.travis-ci.org/dradis/dradis-osvdb.png?branch=master)](http://travis-ci.org/dradis/dradis-osvdb) [![Code Climate](https://codeclimate.com/github/dradis/dradis-osvdb.png)](https://codeclimate.com/github/dradis/dradis-osvdb.png)
+
 
 OSVDB is an independent and open source database created by and for the
 community. Our goal is to provide accurate, detailed, current, and unbiased
